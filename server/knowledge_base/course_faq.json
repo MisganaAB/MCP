@@ -1,0 +1,16 @@
+{
+  "faq": [
+    {
+      "question": "What is the difference between an MCP tool and an MCP resource?",
+      "answer": "Tools are executable functions that accept input arguments and can have side effects or query external systems. Resources are passive, read-only data attachments addressable via a URI, similar to a GET endpoint."
+    },
+    {
+      "question": "Why is Streamable HTTP preferred over legacy SSE?",
+      "answer": "Streamable HTTP simplifies deployment by multiplexing requests, responses, and SSE event streaming onto a single endpoint (e.g. /mcp) using standard HTTP methods (POST, GET, DELETE) and header-based session tracking."
+    },
+    {
+      "question": "How does server-side authorization protect MCP tools?",
+      "answer": "Even if an LLM is prompted to call a sensitive tool, the MCP server checks incoming request headers and scopes at the moment of execution. If the client lacks the necessary scope, the execution is blocked directly at the server boundary."
+    }
+  ]
+}
